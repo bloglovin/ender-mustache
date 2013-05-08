@@ -1,0 +1,18 @@
+{
+    "name":"ender-mustache"
+  , "description": "Logic-less templates that work with ender."
+  , "version": "0.7.2"
+  , "homepage": "http://github.com/bloglovin/ender-mustache"
+  , "author": "David Byrd <david@byrdhou.se>"
+  , "main": "./mustache.js"
+  , "ender": "./src/ender.js"
+  , "keywords": ["ender", "mustache", "template", "templates", "bloglovin"]
+  , "repository": {
+      "type": "git"
+    , "url": "https://github.com/bloglovin/ender-mustache"
+  }
+  , "devDependencies": {
+      "smoosh": "0.4.x"
+    , "mocha": "1.9.0"
+  }
+}
