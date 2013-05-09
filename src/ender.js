@@ -1,6 +1,6 @@
 var mustache = require('ender-mustache')
   , loadTemplate = function (path, callback) { //TODO figure out how to do this without an extra request
-    $.ajax({
+    ender.ajax({
         url: path
       , type: 'html'
       , success: function (res) {
