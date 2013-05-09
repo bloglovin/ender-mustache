@@ -11,6 +11,9 @@
       "type": "git"
     , "url": "https://github.com/bloglovin/ender-mustache"
   }
+  , "dependencies": {
+      "reqwest": "0.7.3"
+  }
   , "devDependencies": {
       "smoosh": "0.4.x"
     , "mocha": "1.9.0"

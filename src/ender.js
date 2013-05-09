@@ -9,8 +9,6 @@ var mustache = require('ender-mustache')
     })
   }
 
-
-
 ender.ender({
     /**
      * Either returns rendered HTML or inserts it into a parent element.
