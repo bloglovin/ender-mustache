@@ -20,11 +20,14 @@ ender.ender({
      */
     render: function (pathToTemplate, data, parentSelector) {
       loadTemplate(pathToTemplate, function (template) {
-        parentSelector ?
-          Array.prototype.slice.call(document.querySelectorAll(parentSelector)).forEach(function (el){ 
-            el.innerHTML = $.render(template, data)
+        if (parentSelector) {
+          var parents = document.querySelectorAll(parentSelector)
+          Array.prototype.slice.call(parents).forEach(function (el) { 
+            el.innerHTML = mustache.render(template, data)
           })
-        : return $.render(template, data)
+        } else {
+          return mustache.render(template, data)
+        }
       })
 
     }
