@@ -1,23 +1,10 @@
-/*!
- * mustache.js - Logic-less {{mustache}} templates with JavaScript
- * http://github.com/janl/mustache.js
- */
+!function (name, context, definition) {
+  if (typeof define == 'function') define(definition)
+  else if (typeof module != 'undefined') module.exports = definition()
+  else context[name] = definition()
+}('mustache', this, function () {
 
-/*global define: false*/
-
-(function (root, factory) {
-  if (typeof exports === "object" && exports) {
-    factory(exports); // CommonJS
-  } else {
-    var mustache = {};
-    factory(mustache);
-    if (typeof define === "function" && define.amd) {
-      define(mustache); // AMD
-    } else {
-      root.mustache = mustache; // <script>
-    }
-  }
-}(this, function (mustache) {
+  var mustache = {};
 
   var whiteRe = /\s*/;
   var spaceRe = /\s+/;
@@ -533,4 +520,6 @@
     }
   };
 
-}));
+  return mustache
+
+});

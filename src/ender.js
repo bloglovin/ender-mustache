@@ -1,4 +1,4 @@
-var mustache = require('mustache')
+var mustache = require('ender-mustache')
 
 ender.ender({
   render: mustache.render,
