@@ -6,19 +6,13 @@
  * Copyright (c) 2009 Chris Wanstrath (Ruby)
  * Copyright (c) 2010 Jan Lehnardt (JavaScript)
 */
-!function (name, root, factory) {
-  if (typeof exports === "object" && exports) {
-    factory(exports); // CommonJS
-  } else {
-    var mustache = {};
-    factory(mustache);
-    if (typeof define === "function" && define.amd) {
-      define(mustache); // AMD
-    } else {
-      root[name] = mustache; // <script>
-    }
-  }
-}('mustache', this, function (mustache) {
+!function (name, context, definition) {
+  if (typeof define == 'function') define(definition)
+  else if (typeof module != 'undefined') module.exports = definition()
+  else context[name] = definition()
+}('mustache', this, function () {
+
+  var mustache = {};
 
   var whiteRe = /\s*/;
   var spaceRe = /\s+/;
