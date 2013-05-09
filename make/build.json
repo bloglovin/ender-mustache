@@ -1,7 +1,7 @@
 {
   "JAVASCRIPT": {
       "DIST_DIR": "./"
-    , "qmark": [
+    , "ender-mustache": [
           "./src/copyright.js"
         , "./src/mustache.js"
       ]

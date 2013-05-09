@@ -1,5 +1,6 @@
 var mustache = require('mustache')
 
 ender.ender({
-  render: mustache.render
+  render: mustache.render,
+  mustache: mustache
 })
