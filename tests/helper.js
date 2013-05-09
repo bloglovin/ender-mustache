@@ -1,2 +1,2 @@
 assert = require('assert');
-Mustache = require('../mustache');
+Mustache = require('../ender-mustache');
